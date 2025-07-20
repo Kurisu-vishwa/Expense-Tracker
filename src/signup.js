@@ -45,7 +45,7 @@ submit.addEventListener('click', (e) => {
             console.log("User created successfully:");
             alert("User created successfully!");
             // Redirect to login page or dashboard
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             const errorCode = error.code;
