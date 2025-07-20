@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="styleforindex.css">
+    <link rel="stylesheet" href="styleformain.css">
 </head>
 <body>
 
@@ -16,13 +16,39 @@
         <label for="expense-amount">Amount:</label>
         <input type="number" id="expense-amount" name="expense-amount" required placeholder="Enter amount">
         
-        <button type="submit" onclick="">Add Expense</button>
+        <button type="submit" onclick="append()" id="Add-btn">Add Expense</button>
     </form>
 
     <h2>Expenses List</h2>
-    <ul id="expenses-list"></ul>
+    <ul id="expenses-list">
 
-    <script src="app.js"></script>
+
+    </ul>
+
+    <script>
+        function append() {
+            const expenseName = document.getElementById('expense-name').value;
+            const expenseAmount = document.getElementById('expense-amount').value;
+            const expensesList = document.getElementById('expenses-list');
+            if (expenseName && expenseAmount) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${expenseName}: $${expenseAmount}`;
+                expensesList.appendChild(listItem);
+                document.getElementById('expense-name').value = '';
+                document.getElementById('expense-amount').value = '';
+
+        
+            } else {
+                alert('Please fill in both fields.');   
+            }
+        }
+
+    
+
+
+    
+    
+    </script>
     
 </body>
 </html>
