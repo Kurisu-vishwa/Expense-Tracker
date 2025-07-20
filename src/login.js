@@ -57,7 +57,7 @@ submit.addEventListener('click', (e) => {
         console.log("User signed in successfully:");    
         alert("User signed in successfully!");
         // Redirect to dashboard or home page
-        window.location.href = "index.html"; 
+        window.location.href = "main.html"; 
     }) // Change to your dashboard page
     .catch((error) => {
         const errorCode = error.code;
