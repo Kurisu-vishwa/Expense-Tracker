@@ -1,0 +1,14 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Expense tracker with Firebase Auth, deployed on Azure",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step needed'"
+  },
+  "author": "Aki",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
